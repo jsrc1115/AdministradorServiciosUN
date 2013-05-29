@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ice="http://www.icesoft.com/icefaces/component">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title>Administrador de Servicios de Salud</title>
+    </h:head>
+
+    <h:body>
+        <div id="top" class="top">
+            <ice:graphicImage value="resources/icono_salud.jpg"></ice:graphicImage>
+            <ice:graphicImage value="resources/Titulo.png"></ice:graphicImage>
+        </div>
+
+        <div id="content" class="center_content">
+            <ice:form id="form"> 
+                <h1>Por favor ingrese sus datos para ingresar al sistema</h1>
+                <label>Usuario</label>
+                <ice:inputText label="Usuario" > </ice:inputText>
+                <label>Contraseña</label>
+                <ice:inputSecret label="Contraseña"> </ice:inputSecret>
+                <h:commandButton value="Ingresar" action="#{LoginBean.doLogin}"></h:commandButton>
+            </ice:form>
+        </div>
+        <div id="bottom">
+            <ui:insert name="bottom">
+                <h:outputText value="All rights reserved and all that BS"/>
+            </ui:insert>
+        </div>
+    </h:body>
+</html>
