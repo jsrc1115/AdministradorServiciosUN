@@ -27,4 +27,10 @@ public class FiltroBean {
         
         return message+"?faces-redirect=true";
     }
+    public String goHomeEPS()
+    {
+        message = "HomeEPS";
+        
+        return message+"?faces-redirect=true";
+    }
 }

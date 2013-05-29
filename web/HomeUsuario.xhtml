@@ -12,7 +12,7 @@
         <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
         <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
         
-        <title>Administrador de servicios</title>
+        <title>Administrador de Servicios</title>
     </h:head>
     <h:body>
         <div id="top" class="top">
@@ -33,7 +33,7 @@
             <ace:menu id="menu" position="dynamic" trigger="mouseOver" my="left top" at="left bottom" triggerEvent="mouseenter" >
                 <ace:submenu>
                     <ace:menuItem value="Ver historia clinica" icon="resources/historia.jpg" action="#{infoHomeUsuario.goUsuarioHistoriaClinica}"/>
-                    <ace:menuItem value="Editar informacion personal" icon="resources/settings"/>
+                    <ace:menuItem value="Editar informacion personal" icon="resources/settings" action="#{infoHomeUsuario.goInfoUsuario()}"/>
                 </ace:submenu>
             </ace:menu>
             <h:panelGrid columns="2">
@@ -66,12 +66,12 @@
                     <p:dialog widgetVar="eventDialog" header="Event Details" showEffect="clip" hideEffect="clip">  
                         <h:panelGrid id="eventDetails" columns="2">  
                             <h:outputLabel for="from" value="From:" />  
-                            <p:inputMask id="from" value="#{scheduleController.event.startDate}" mask="99/99/9999">  
+                            <p:inputMask id="from" value="11/11/2013" mask="99/99/9999">  
                                 <f:convertDateTime pattern="dd/MM/yyyy" />  
                             </p:inputMask>  
 
                             <h:outputLabel for="to" value="To:" />  
-                            <p:inputMask id="to" value="#{scheduleController.event.endDate}" mask="99/99/9999">  
+                            <p:inputMask id="to" value="11/11/2013" mask="99/99/9999">  
                                 <f:convertDateTime pattern="dd/MM/yyyy" />  
                             </p:inputMask>  
 
